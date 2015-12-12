@@ -1,0 +1,25 @@
+﻿@model AuthorizationApp01.Models.RegisterViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div> 
+        <h2>Register</h2>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            <h4>Create a new account.</h4>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email)
+        }
+    </div>
+</body>
+</html>
